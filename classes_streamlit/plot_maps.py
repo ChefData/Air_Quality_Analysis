@@ -148,23 +148,6 @@ class PlotMaps:
                     get_fill_color=[255, 140, 0],
                     get_line_color=[0, 0, 0],
                 ),
-                """
-                "Column": pdk.Layer(
-                    "ColumnLayer",
-                    data,
-                    get_position=['longitude', 'latitude'],
-                    get_elevation="value",
-                    get_fill_color=["color"],
-                    get_radius=100,
-                    radius=2000,
-                    extruded=True,
-                    auto_highlight=True,
-                    elevation_scale=5,
-                    pickable=True,
-                    elevation_range=[0, 1000],
-                    coverage=1
-                ),
-                """
                 "Hexagon": pdk.Layer(
                     "HexagonLayer",
                     data,
@@ -177,7 +160,6 @@ class PlotMaps:
                     elevation_range=[0, 1000],
                     coverage=1
                 ),
-
             }
 
             popover = st.popover("Map Layers")
