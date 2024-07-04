@@ -283,7 +283,7 @@ if __name__ == "__main__":
         ]
     }
 
-    tab1, tab2 , tab3= st.tabs(["Details of air quality parameters", "Choose a location to compare parameters", "Choose a parameter to compare locations"])
+    tab1, tab2 , tab3= st.tabs(["Details of parameters", "Choose location to compare parameters", "Choose parameter to compare locations"])
     with tab1:
         st.table(pd.DataFrame(data))
     with tab2:
