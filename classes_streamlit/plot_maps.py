@@ -89,7 +89,7 @@ class PlotMaps:
         """
         try:
             st.write("""
-                ⦿ Calculates the size and assign the colours based on value percentiles.
+                • Calculates the size and assign the colours based on value percentiles.
             """)
             data, size_percentiles = PlotMaps.calculate_size_and_color(data)
             pointsData = [
@@ -118,7 +118,7 @@ class PlotMaps:
         """
         try:
             st.write("""
-                ⦿ Options include Heatmap, Scatterplot, Column and Hexagon.
+                • Options include Heatmap, Scatterplot, Column and Hexagon.
             """)
             data, size_percentiles = PlotMaps.calculate_size_and_color(data)
 
@@ -148,6 +148,7 @@ class PlotMaps:
                     get_fill_color=[255, 140, 0],
                     get_line_color=[0, 0, 0],
                 ),
+                """
                 "Column": pdk.Layer(
                     "ColumnLayer",
                     data,
@@ -163,6 +164,7 @@ class PlotMaps:
                     elevation_range=[0, 1000],
                     coverage=1
                 ),
+                """
                 "Hexagon": pdk.Layer(
                     "HexagonLayer",
                     data,
@@ -182,7 +184,7 @@ class PlotMaps:
             selected_layer = [
                 layer
                 for layer_name, layer in ALL_LAYERS.items()
-                if layer_name != "Text" and popover.checkbox(layer_name, True) or layer_name == "Text" and not popover.checkbox(layer_name, False)
+                if layer_name != "Hexagon" and popover.checkbox(layer_name, True) or layer_name == "Hexagon" and not popover.checkbox(layer_name, False)
             ]
 
             if selected_layer:
