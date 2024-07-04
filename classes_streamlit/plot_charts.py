@@ -20,7 +20,7 @@ class PlotCharts:
         """
         try:
             st.write("""
-                ⦿ Plot time series of parameter for selected locations.  
+                • Plot time series of parameter for selected locations.  
             """)
             st.subheader(f"Time Series of {selected_parameter} ({selected_unit})")
 
@@ -34,7 +34,7 @@ class PlotCharts:
 
             # Ensure default_locations are within the current locations list
             default_locations = [loc for loc in st.session_state['default_locations'] if loc in locations]
-            selected_locations = st.multiselect("Select locations to plot", locations, default=default_locations)
+            selected_locations = st.multiselect("Select multiple locations to compare parameter", locations, default=default_locations)
 
             if selected_locations:
                 plt.figure(figsize=(10, 6))
@@ -67,7 +67,7 @@ class PlotCharts:
         """
         try:
             st.write("""
-                ⦿ Plot the average value of the selected parameter by country. 
+                • Plot the average value of the selected parameter by country. 
             """)
             avg_by_country = data.groupby('country_name')['value'].mean().reset_index()
 
