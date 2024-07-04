@@ -228,7 +228,7 @@ class StreamlitApp:
 
 if __name__ == "__main__":
     # Setting up Streamlit page configuration
-    st.set_page_config(page_title="Air Quality Map", page_icon="🌍")
+    st.set_page_config(page_title="Air Quality Analysis", page_icon="🌍")
     st.title('Air Quality Analysis')
     st.image('https://climate.copernicus.eu/sites/default/files/styles/hero_image_extra_large/public/2023-01/2022GLOBALHIGHLIGHTS_webBG01%402x_6.png?itok=A16ox3rt')
     st.write("""This project periodically collects air quality data from [OpenAQ](https://openaq.org/), processes it, and stores it in a database. The collected data is visualised to demonstrate critical aspects of air quality trends, enabling air quality analysis over time, and helping users understand pollution levels and their impact.""")
