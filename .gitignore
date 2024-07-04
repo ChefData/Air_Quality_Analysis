@@ -1,6 +1,7 @@
 # Directories
 do_not_track/
 .streamlit/
+.DS_Store
 
 # Individual Files
 creds.yaml
