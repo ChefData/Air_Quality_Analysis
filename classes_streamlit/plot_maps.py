@@ -69,8 +69,7 @@ class PlotMaps:
         """
         try:
             st.write("""
-                ⦿ Plot the data on a map using streamlit's st.map.  
-                ⦿ Calculate size and assign colors based on value percentiles.
+                ⦿ Calculates the size and assign the colours based on value percentiles.
             """)
             data, size_percentiles = PlotMaps.calculate_size_and_color(data)
             st.map(data, latitude='latitude', longitude='longitude', size='size', color='color')
@@ -90,8 +89,7 @@ class PlotMaps:
         """
         try:
             st.write("""
-                ⦿ Plot the data on an interactive globe using streamlit_globe.  
-                ⦿ Calculate size and assign colors based on value percentiles.
+                ⦿ Calculates the size and assign the colours based on value percentiles.
             """)
             data, size_percentiles = PlotMaps.calculate_size_and_color(data)
             pointsData = [
@@ -120,7 +118,6 @@ class PlotMaps:
         """
         try:
             st.write("""
-                ⦿ Plot the data on an interactive map using pydeck.  
                 ⦿ Options include Heatmap, Scatterplot, Column and Hexagon.
             """)
             data, size_percentiles = PlotMaps.calculate_size_and_color(data)
