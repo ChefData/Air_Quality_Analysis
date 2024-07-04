@@ -8,6 +8,8 @@ The `Air Quality Analysis application` is a data-driven tool for visualising and
 
 This project fetches air quality data from the [OpenAQ](https://openaq.org/) API, processes it, and loads it into PostgreSQL tables. The project is designed to upload and configure tables in a PostgreSQL database. It processes data related to countries, cities, locations, and measurements and handles schema creation, data type casting, and primary/foreign key constraints.
 
+![Architecture](<OpenAQ.png>)
+
 ## Features
 
 - **Parameter Selection:** Choose from a range of air quality parameters such as PM2.5, NO₂, and O₃.
