@@ -4,3 +4,4 @@ streamlit_globe
 sqlalchemy
 matplotlib
 pydeck
+psycopg2
