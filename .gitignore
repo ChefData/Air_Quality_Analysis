@@ -1,6 +1,11 @@
+# Directories
+do_not_track/
+.streamlit/
+
 # Individual Files
 creds.yaml
 .env
+secrets.toml
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
