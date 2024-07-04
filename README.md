@@ -4,9 +4,9 @@
 
 ## Overview
 
-The `Air Quality Analysis application` is a data-driven tool for visualising and analysing air quality parameters worldwide. Utilising Streamlit for an interactive user interface, the application fetches data from a SQL database and presents it through various charts and maps. Users can select specific parameters and units to observe how air quality varies across different locations and times.
+The `Air Quality Analysis application` is a data-driven tool for visualising and analysing air quality parameters worldwide. Utilising Streamlit for an interactive user interface, the application fetches data from an SQL database and presents it through various charts and maps. Users can select specific parameters and units to observe how air quality varies across locations and times.
 
-This project fetches air quality data from the [OpenAQ](https://openaq.org/) API, processes it, and loads it into PostgreSQL tables. The project is designed to upload and configure tables in a PostgreSQL database. It processes data related to countries, cities, locations, and measurements, and handles schema creation, data type casting, and primary/foreign key constraints.
+This project fetches air quality data from the [OpenAQ](https://openaq.org/) API, processes it, and loads it into PostgreSQL tables. The project is designed to upload and configure tables in a PostgreSQL database. It processes data related to countries, cities, locations, and measurements and handles schema creation, data type casting, and primary/foreign key constraints.
 
 ## Features
 
@@ -21,7 +21,7 @@ This project fetches air quality data from the [OpenAQ](https://openaq.org/) API
 
 ## Technologies Used
 
-- **Streamlit**: For building and deploying the web application.
+- **Streamlit**: This is for building and deploying the web application.
 - **Python**: Backend logic and calculations.
 - **Pandas**: Data manipulation and handling.
 - **streamlit_globe**: For displaying points on a globe
@@ -137,7 +137,7 @@ This will fetch, process, and load the latest air quality data into the PostgreS
 ## Application Usage
 
 1. **Parameter and Unit Selection:**
-   - Use the dropdown menus to select an air quality parameter and its corresponding unit.
+   - Use the dropdown menus to select an air quality parameter and corresponding unit.
 
 2. **View Data:**
    - The application fetches and displays data based on the selected parameter and unit.
@@ -213,7 +213,7 @@ We welcome contributions to enhance the functionality and features of this appli
    ```
 
 6. **Submit a Pull Request:**
-   - Go to the original repository on GitHub and click on "New Pull Request".
+   - Go to the original GitHub repository and click "New Pull Request".
 
 ## License
 
@@ -221,8 +221,8 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 ## Acknowledgements
 
-- OpenAQ for provides universal air quality data to address unequal access to clean air
-- Streamlit for providing an excellent framework for building interactive applications.
+- OpenAQ provides universal air quality data to address unequal access to clean air
+- Streamlit provides an excellent framework for building interactive applications.
 - The open-source community for their continuous support and contributions.
 
 ## Contact
