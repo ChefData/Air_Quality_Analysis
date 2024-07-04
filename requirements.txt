@@ -1,0 +1,6 @@
+streamlit
+plotly
+streamlit_globe
+sqlalchemy
+matplotlib.pyplot
+pydeck
