@@ -4,4 +4,4 @@ streamlit_globe
 sqlalchemy
 matplotlib
 pydeck
-psycopg2
+psycopg2-binary
