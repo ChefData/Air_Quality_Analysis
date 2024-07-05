@@ -241,51 +241,47 @@ if __name__ == "__main__":
     streamlit_app = StreamlitApp()
     streamlit_app.init_session_state()
 
-    data = {
-        'Parameter': ['PM1','PM4','PM10','PM25','NO','NO₂','NOx','SO₂','O₃','CO','CO₂','BC','VOC','TEMPERATURE','PRESSURE','HUMIDITY','RELATIVE HUMDITY'],
-        'Description': [
-            'Particulate matter with a diameter smaller than 1 micrometre. It measures mass concentration in micrograms per cubic meter (µg/m³). These particles are microscopic and can penetrate deep into the respiratory system, potentially causing health issues.',
-            'Particulate matter with a diameter smaller than 4 micrometres. It quantifies mass concentration (µg/m³). These particles include fine dust and aerosols, influencing air quality and respiratory health.',
-            'Particulate matter with a diameter smaller than 10 micrometres, measuring mass concentration (µg/m³). It includes larger particles like dust and pollen, affecting air quality and respiratory health.',
-            'Particulate matter with a diameter smaller than 2.5 micrometres. It quantifies mass concentration (µg/m³). These fine particles are especially concerning as they can penetrate deep into the lungs and enter the bloodstream, posing severe health risks.',
-            'Nitrogen Monoxide, measuring its concentration in micrograms per cubic meter (µg/m³) and parts per million (ppm). It\'s a reactive gas produced by combustion processes and contributes to air pollution and the formation of ozone and smog.',
-            'Nitrogen Dioxide concentration in micrograms per cubic meter (µg/m³), parts per billion (ppb), and parts per million (ppm). It\'s a reddish-brown gas emitted from combustion processes and contributes to respiratory problems and environmental damage.',
-            'Nitrogen Oxides, including NO and NO₂. It measures their combined concentration in micrograms per cubic meter (µg/m³) and parts per million (ppm). NOx is a significant air pollutant contributing to smog, acid rain, and respiratory issues.',
-            'Sulfur Dioxide concentration in micrograms per cubic meter (µg/m³), parts per billion (ppb), and parts per million (ppm). It\'s produced from burning fossil fuels containing sulfur and is a major air pollutant causing respiratory problems and acid rain.',
-            'Ozone concentration in micrograms per cubic meter (µg/m³) and parts per million (ppm). Ozone in the stratosphere protects life on Earth from the sun\'s ultraviolet radiation, but ground-level ozone is a harmful air pollutant affecting respiratory health.',
-            'Carbon Monoxide concentration in micrograms per cubic meter (µg/m³), parts per billion (ppb), and parts per million (ppm). It\'s a colourless, odourless gas produced from incomplete combustion of carbon-containing fuels and poses health risks by reducing oxygen delivery in the body.',
-            'Carbon Dioxide concentration in parts per million (ppm). It\'s a naturally occurring greenhouse gas essential for photosynthesis and a key indicator of human-induced climate change due to burning fossil fuels and deforestation.',
-            'Black Carbon concentration in micrograms per cubic meter (µg/m³). It consists of fine particulate matter from incomplete combustion of fossil fuels, biomass, and biofuels. BC contributes to air pollution, climate change, and adverse health effects.',
-            'Volatile Organic Compounds in indoor air quality units (iaq). VOCs are organic chemicals that evaporate from paints, cleaning supplies, and fuels at room temperature. They can cause short-term health effects and long-term exposure risks.',
-            'Temperature measures the degree of hotness or coldness of a substance or environment in degrees Celsius (C) and Fahrenheit (F). It\'s a fundamental meteorological parameter influencing weather patterns, ecosystems, and human comfort.',
-            'Pressure measures the force exerted perpendicular to a surface per unit area in hectopascals (hPa) or millibars (mb). It\'s a crucial meteorological parameter affecting weather systems, atmospheric stability, and altitude-related conditions.',
-            'Humidity measures the amount of water vapour in the air as a percentage (%) of the maximum amount the air can hold at a given temperature. It influences weather patterns, comfort levels, and the effectiveness of certain industrial processes.',
-            'Relative Humidity measures the amount of water vapour present in the air relative to the maximum amount the air could hold at the same temperature and pressure, expressed as a percentage (%). It\'s a critical meteorological parameter affecting human comfort, health, and agricultural productivity.'
-        ],
-        'Units': [
-            'µg/m³',
-            'µg/m³',
-            'µg/m³',
-            'µg/m³',
-            'µg/m³, ppm',
-            'µg/m³, ppb, ppm',
-            'µg/m³, ppm',
-            'µg/m³, ppb, ppm',
-            'µg/m³, ppm',
-            'µg/m³, ppb, ppm',
-            'ppm',
-            'µg/m³',
-            'iaq',
-            'C, F',
-            'hpa, mb',
-            '%',
-            '%'
-        ]
-    }
 
     tab1, tab2 , tab3= st.tabs(["Details of parameters", "Choose location to compare parameters", "Choose parameter to compare locations"])
     with tab1:
-        st.table(pd.DataFrame(data))
+        with st.expander("Particulate matter"):
+            st.write("""
+                PM1 - Particulate matter with a diameter smaller than 1 micrometre. It measures mass concentration in micrograms per cubic meter (µg/m³). These particles are microscopic and can penetrate deep into the respiratory system, potentially causing health issues.  
+                     
+                PM4 - Particulate matter with a diameter smaller than 4 micrometres. It quantifies mass concentration (µg/m³). These particles include fine dust and aerosols, influencing air quality and respiratory health.  
+                     
+                PM10 - Particulate matter with a diameter smaller than 10 micrometres, measuring mass concentration (µg/m³). It includes larger particles like dust and pollen, affecting air quality and respiratory health.  
+                     
+                PM25 - Particulate matter with a diameter smaller than 2.5 micrometres. It quantifies mass concentration (µg/m³). These fine particles are especially concerning as they can penetrate deep into the lungs and enter the bloodstream, posing severe health risks.
+            """)
+        with st.expander("Nitrogen Monoxide"):
+            st.write("NO - Nitrogen Monoxide, measuring its concentration in micrograms per cubic meter (µg/m³) and parts per million (ppm). It\'s a reactive gas produced by combustion processes and contributes to air pollution and the formation of ozone and smog.")
+        with st.expander("Nitrogen Dioxide"):
+            st.write("NO₂ - Nitrogen Dioxide concentration in micrograms per cubic meter (µg/m³), parts per billion (ppb), and parts per million (ppm). It\'s a reddish-brown gas emitted from combustion processes and contributes to respiratory problems and environmental damage.")
+        with st.expander("Nitrogen Dioxide"):
+            st.write("NO₂ - Nitrogen Dioxide concentration in micrograms per cubic meter (µg/m³), parts per billion (ppb), and parts per million (ppm). It\'s a reddish-brown gas emitted from combustion processes and contributes to respiratory problems and environmental damage.")
+        with st.expander("Nitrogen Oxides"):
+            st.write("NOx - Nitrogen Oxides, including NO and NO₂. It measures their combined concentration in micrograms per cubic meter (µg/m³) and parts per million (ppm). NOx is a significant air pollutant contributing to smog, acid rain, and respiratory issues.")
+        with st.expander("Sulfur Dioxide"):
+            st.write("SO₂ - Sulfur Dioxide concentration in micrograms per cubic meter (µg/m³), parts per billion (ppb), and parts per million (ppm). It\'s produced from burning fossil fuels containing sulfur and is a major air pollutant causing respiratory problems and acid rain.")
+        with st.expander("Ozone"):
+            st.write("O₃ - Ozone concentration in micrograms per cubic meter (µg/m³) and parts per million (ppm). Ozone in the stratosphere protects life on Earth from the sun\'s ultraviolet radiation, but ground-level ozone is a harmful air pollutant affecting respiratory health.")
+        with st.expander("Carbon Monoxide"):
+            st.write("CO - Carbon Monoxide concentration in micrograms per cubic meter (µg/m³), parts per billion (ppb), and parts per million (ppm). It\'s a colourless, odourless gas produced from incomplete combustion of carbon-containing fuels and poses health risks by reducing oxygen delivery in the body.")
+        with st.expander("Carbon Dioxide concentration"):
+            st.write("CO₂ - Carbon Dioxide concentration in parts per million (ppm). It\'s a naturally occurring greenhouse gas essential for photosynthesis and a key indicator of human-induced climate change due to burning fossil fuels and deforestation.")
+        with st.expander("Black Carbon concentration"):
+            st.write("BC - Black Carbon concentration in micrograms per cubic meter (µg/m³). It consists of fine particulate matter from incomplete combustion of fossil fuels, biomass, and biofuels. BC contributes to air pollution, climate change, and adverse health effects.")
+        with st.expander("Volatile Organic Compounds"):
+            st.write("VOC - Volatile Organic Compounds in indoor air quality units (iaq). VOCs are organic chemicals that evaporate from paints, cleaning supplies, and fuels at room temperature. They can cause short-term health effects and long-term exposure risks.")
+        with st.expander("Temperature"):
+            st.write("Temperature measures the degree of hotness or coldness of a substance or environment in degrees Celsius (C) and Fahrenheit (F). It\'s a fundamental meteorological parameter influencing weather patterns, ecosystems, and human comfort.")
+        with st.expander("Pressure"):
+            st.write("Pressure measures the force exerted perpendicular to a surface per unit area in hectopascals (hPa) or millibars (mb). It\'s a crucial meteorological parameter affecting weather systems, atmospheric stability, and altitude-related conditions.")
+        with st.expander("Humidity"):
+            st.write("Humidity measures the amount of water vapour in the air as a percentage (%) of the maximum amount the air can hold at a given temperature. It influences weather patterns, comfort levels, and the effectiveness of certain industrial processes.")
+        with st.expander("Relative Humidity"):
+            st.write("Relative Humidity measures the amount of water vapour present in the air relative to the maximum amount the air could hold at the same temperature and pressure, expressed as a percentage (%). It\'s a critical meteorological parameter affecting human comfort, health, and agricultural productivity.")
     with tab2:
         with st.container(border=True):
             streamlit_app.location_details()
