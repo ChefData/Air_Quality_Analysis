@@ -10,6 +10,13 @@ This project fetches air quality data from the [OpenAQ](https://openaq.org/) API
 
 ![Architecture](<OpenAQ.png>)
 
+## Project Navigation
+
+The [wiki](https://github.com/ChefData/Air_Quality_Analysis/wiki) supplies walkthrough documents:
+
+- [Installation instructions](https://github.com/ChefData/Air_Quality_Analysis/wiki/Installation-instructions) will describe how set up and install the project on your local machine.
+- [Contributing](https://github.com/ChefData/Air_Quality_Analysis/wiki/Contributing) will describe how you can contribute to enhance the functionality and features of this application
+
 ## Features
 
 - **Parameter Selection:** Choose from a range of air quality parameters such as PM2.5, NO₂, and O₃.
