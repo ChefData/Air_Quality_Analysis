@@ -191,6 +191,7 @@ class DataLoader:
                 if fk_dict and not self.__check_key_exists(table_name, self.schema, 'FOREIGN KEY'):
                     self.__add_foreign_key(table_name, self.schema, fk_dict)
 
+            '''
             # Process parameter-specific tables and upload them
             parameter_tables = self.data_processor.create_parameter_tables(measurements_df)
             for parameter, units_dict in parameter_tables.items():
@@ -200,7 +201,8 @@ class DataLoader:
                     self.__upload_to_db(df, table_name, self.schema)
                     self.__cast_data_types(table_name, self.schema, parameters_column_types)
                     self.__add_foreign_key(table_name, self.schema, {'de10_na_openaq_locations': 'location_id'})
-            
+            '''
+
             logger.info("Cleaned data loaded to PostgreSQL tables")
         except Exception as e:
             logger.error(f"Error uploading and configuring tables: {e}")
