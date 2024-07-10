@@ -4,7 +4,7 @@
 
 ## Overview
 
-The `Air Quality Analysis application` is a data-driven tool for visualising and analysing air quality parameters worldwide. Utilising Streamlit for an interactive user interface, the application fetches data from an SQL database and presents it through various charts and maps. Users can select specific parameters and units to observe how air quality varies across locations and times.
+The [Air Quality Analysis application](https://air-quality-analysis.streamlit.app/) is a data-driven tool for visualising and analysing air quality parameters worldwide. Utilising Streamlit for an interactive user interface, the application fetches data from an SQL database and presents it through various charts and maps. Users can select specific parameters and units to observe how air quality varies across locations and times.
 
 This project fetches air quality data from the [OpenAQ](https://openaq.org/) API, processes it, and loads it into PostgreSQL tables. The project is designed to upload and configure tables in a PostgreSQL database. It processes data related to countries, cities, locations, and measurements and handles schema creation, data type casting, and primary/foreign key constraints.
 
