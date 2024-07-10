@@ -8,7 +8,7 @@ The `Air Quality Analysis application` is a data-driven tool for visualising and
 
 This project fetches air quality data from the [OpenAQ](https://openaq.org/) API, processes it, and loads it into PostgreSQL tables. The project is designed to upload and configure tables in a PostgreSQL database. It processes data related to countries, cities, locations, and measurements and handles schema creation, data type casting, and primary/foreign key constraints.
 
-![Architecture](<OpenAQ.png>)
+![Architecture](<Images/OpenAQ.png>)
 
 ## Project Navigation
 
@@ -44,16 +44,30 @@ The [wiki](https://github.com/ChefData/Air_Quality_Analysis/wiki) supplies walkt
 1. **Parameter and Unit Selection:**
    - Use the dropdown menus to select an air quality parameter and corresponding unit.
 
+   ![example-parameter](<Images/example-parameter.png>)
+
 2. **View Data:**
    - The application fetches and displays data based on the selected parameter and unit.
    - Interact with the data through various visualisations such as maps, charts, and an interactive globe.
 
+   ![example-data](<Images/example-data.png>)
+
 3. **Customise Map Layers:**
    - Use the dropdown to select which map layers to display, enhancing your data visualisation experience.
+
+   ![example-globe](<Images/example-globe.png>)
 
 ## Data Sources
 
 The data for this application is periodically fetched from the [OpenAQ](https://openaq.org/) API containing air quality measurements.
+
+![OpenAQ](<https://openaq.org/svg/data-pipeline.svg>)
+
+## Database design
+
+The project uses an RDS database containing four tables with data received from the OpenAQ API:
+
+![database-schema](<Images/database-schema.png>)
 
 ## Project Structure
 
